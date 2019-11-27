@@ -40,6 +40,8 @@ services:
     ports:  
       - "3000:3000"
     command: npm start --silent
+    dns: 
+     - 200.129.79.61
     depends_on:
       - mongo
   
