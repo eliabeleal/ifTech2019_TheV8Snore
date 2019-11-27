@@ -32,6 +32,7 @@ services:
     image: "node:10-alpine"
     user: node
     container_name: node-container
+    restart: always
     working_dir: /home/node/app
     environment: 
       - NODE_ENV=production
@@ -49,6 +50,7 @@ services:
     image: "node:10-alpine"
     user: node
     container_name: react-container
+    restart: always
     working_dir: /home/node/app
     environment: 
       - NODE_ENV=production
