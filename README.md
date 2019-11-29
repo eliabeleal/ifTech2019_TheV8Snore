@@ -24,7 +24,7 @@ Steps
     `
     http://localhost:8081
     `
-1. Usando um cliente HTTP
+1. Usando um cliente HTTP ([HTTPie](https://httpie.org/))
 
     `
     alias http='docker run -ti --rm --net=host alpine/httpie'
