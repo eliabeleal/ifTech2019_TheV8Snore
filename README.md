@@ -46,5 +46,5 @@ Steps
     alias http='docker run -ti --rm --net=host --dns=123.456.789 alpine/httpie'
     `
     
-1. Para fazer todo o curso acesso a branch makecourse e siga esse [script](script/Minicurso_IFTech_2019.pdf)
+1. Para fazer todo o curso acesse a branch makecourse e siga esse [script](script/Minicurso_IFTech_2019.pdf)
 
