@@ -39,8 +39,23 @@ services:
       - ./backend:/home/node/app
       - /home/node/app/node_modules
     ports:  
-      - "8081:8081"
+      - "8081:8080"
     # dns: 
     #  - 200.129.79.61
     depends_on:
       - mongo
+
+  react:
+      build: frontend/
+      container_name: react-container
+      restart: always
+      command: npm start --silent
+      # user: node
+      environment: 
+        - NODE_ENV=production
+      # working_dir: /home/node/app
+      volumes: 
+        - ./frontend:/home/node/app
+        - /home/node/app/node_modules
+      ports:
+        - "3000:3000"
