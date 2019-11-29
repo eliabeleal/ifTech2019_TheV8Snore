@@ -29,36 +29,18 @@ services:
       - $PWD/dumps:/dumps
 
   node:
-    image: "node:10-alpine"
-    user: node
+    build: backend/
     container_name: node-container
     restart: always
-    working_dir: /home/node/app
+    command: npm start --silent
     environment: 
       - NODE_ENV=production
     volumes: 
       - ./backend:/home/node/app
+      - /home/node/app/node_modules
     ports:  
-      - "3000:3000"
-    command: npm start --silent
-    dns: 
-     - 200.129.79.61
+      - "8081:8081"
+    # dns: 
+    #  - 200.129.79.61
     depends_on:
       - mongo
-  
-  react:
-    image: "node:10-alpine"
-    user: node
-    container_name: react-container
-    restart: always
-    working_dir: /home/node/app
-    environment: 
-      - NODE_ENV=production
-    volumes: 
-      - ./frontend:/home/node/app
-    ports:
-      - "3001:3000"
-    command: npm start --silent
-
-  
-
