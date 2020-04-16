@@ -8,7 +8,9 @@ Mas o que é uma engine Javascript?
 
 Objetivo deste minicurso: construir uma aplicação web usando a arquitetura orientada a recursos, REST. Ela será uma rede social de DEVs, onde o usuário vai acessar com seu username do github e dará link e deslike em DEVs.
 
-Steps
+## Getting Started
+
+### Installing
 
 1. Clonando o repositório e rodando o docker
 
